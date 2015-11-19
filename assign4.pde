@@ -4,7 +4,6 @@ PImage start1, start2, end1, end2, bg1, bg2, enemy, player, hp, gift, shoot;
 final int GAMESTART=0, GAMEPLAY=1, GAMEWIN=2, GAMEOVER=3, A=4, B=5, C=6;
 boolean upPressed = false, downPressed = false, leftPressed = false, rightPressed = false;;
 //SHOOT
-float sh1=600;
 boolean space = false;
 //ENEMY
 int eY;
@@ -86,6 +85,9 @@ void draw() {
       gy=floor(random(0,440));
       
     }
+    ///SHOOT///
+    if(space == false){image(shoot, px+10, py+5);}
+    if(space == true){}
     
     
     ///PLAYER///
@@ -185,7 +187,7 @@ void draw() {
             }
           }
         //NEXT//
-        if(e1[0] >= 1200) {
+        if(e1[0] > 900 && e1[1] > 900 && e1[2] > 900 && e1[3] > 900 && e1[4] > 900) {
         enemystate = B;
         e2X[0]=-100; e2X[1]=-165; e2X[2]=-230; e2X[3]=-295; e2X[4]=-360;
         e2Y[0]=e2Ys; e2Y[1]=e2Ys+60; e2Y[2]=e2Ys+120; e2Y[3]=e2Ys+180; e2Y[4]=e2Ys+240; 
@@ -282,7 +284,7 @@ void draw() {
           }
         }
       //NEXT//
-      if(e2X[0] >= 1200) {
+      if(e2X[0] > 900 && e2X[1] > 900 && e2X[2] > 900 && e2X[3] > 900 && e2X[4] > 900) {
       enemystate = A;
       //ENEMY3_X///
       e3X[0]=-360; 
@@ -442,7 +444,7 @@ void draw() {
             }
           }
       //NEXT//
-      if(e3X[7] >= 1200) {
+      if(e3X[0] > 900 && e3X[1] > 900 && e3X[2] > 900 && e3X[3] > 900 && e3X[4] > 900 && e3X[5] > 900 && e3X[6] > 900 && e3X[7] > 900) {
       enemystate = C;
       e1[0] = -100;  e1[1] = -165;  e1[2] = -230;  e1[3] = -295;  e1[4] = -360; 
       eY = floor(random(1,420));
@@ -470,7 +472,7 @@ void draw() {
       }
     }
       
-      //DEAD//
+      /*//DEAD//
       if(life == 30) {
         gamestate = GAMEOVER;
       }
@@ -497,7 +499,7 @@ void draw() {
           image(end1,0,0);
         }
   }
-  break;
+  break;*/
     
 }
 }
