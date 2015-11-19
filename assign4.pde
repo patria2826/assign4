@@ -470,7 +470,7 @@ void draw() {
       }
     }
       
-      /*//DEAD//
+      //DEAD//
       if(life == 30) {
         gamestate = GAMEOVER;
       }
@@ -497,7 +497,7 @@ void draw() {
           image(end1,0,0);
         }
   }
-  break;*/
+  break;
     
 }
 }
