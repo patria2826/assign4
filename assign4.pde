@@ -192,8 +192,8 @@ void draw() {
         e2X[0]=-100; e2X[1]=-165; e2X[2]=-230; e2X[3]=-295; e2X[4]=-360;
         e2Y[0]=e2Ys; e2Y[1]=e2Ys+60; e2Y[2]=e2Ys+120; e2Y[3]=e2Ys+180; e2Y[4]=e2Ys+240; 
         e2Ys=floor(random(1,175));
-        fsec2[i]=0;
-        f2X[i]=0;
+        fsec2[0]=0; fsec2[1]=0; fsec2[2]=0; fsec2[3]=0; fsec2[4]=0;
+        f2X[0]=0; f2X[1]=0; f2X[2]=0; f2X[3]=0; f2X[4]=0;
         }
       
     }
@@ -472,7 +472,7 @@ void draw() {
       }
     }
       
-      /*//DEAD//
+      //DEAD//
       if(life == 30) {
         gamestate = GAMEOVER;
       }
@@ -499,7 +499,7 @@ void draw() {
           image(end1,0,0);
         }
   }
-  break;*/
+  break;
     
 }
 }
